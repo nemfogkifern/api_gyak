@@ -1,0 +1,196 @@
+/* Alap stílusok */
+
+/* BODY */
+body {
+    background-color: rgba(0, 0, 0, 0.897);
+    color: aliceblue;
+    background-image: url('https://img.freepik.com/premium-photo/black-background_807044-1856.jpg');
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+header a h1:hover {
+    color: rgb(202, 230, 254);
+    transition: all 0.3s ease;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header nav {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav a {
+    position: relative;
+    color: aliceblue;
+    text-decoration: none;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+
+header nav a::before {
+    content: ''; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transition: width 0.3s ease, background-color 0.3s ease;
+    margin-top: 5px;
+}
+
+header nav a:hover::before {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* BODY */
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.main div {
+    background-color: rgba(124, 124, 124, 0.636);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 30px;
+    margin: 20px;
+}
+
+.main div img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid aliceblue;
+}
+
+.main div img:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+#apod h2 {
+    background-color: rgba(0, 0, 0, 0.227);
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    height: 30px;
+    margin-bottom: 0px;
+}
+
+/* FOOTER */
+footer {
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    padding: 10px 150px;
+}
+
+/* Reszponzív mobil nézet */
+
+@media screen and (max-width: 768px) {
+    /* HEADER */
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 24px; /* Csökkentett fejléc betűméret */
+        text-align: center;
+    }
+
+    header nav {
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 10px;
+    }
+
+    header nav a {
+        font-size: 20px; /* Kisebb betűméret mobilra */
+        margin-right: 0;
+    }
+
+    /* BODY */
+    .main {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .main div {
+        width: 90%; /* Szélesség 90% mobil nézetben */
+        margin: 10px 0; /* Kisebb margó */
+        padding: 10px;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 10px 30px; /* Csökkentett padding mobilon */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* HEADER */
+    header {
+        padding: 5px;
+    }
+
+    header h1 {
+        font-size: 20px; /* Még kisebb betűméret mobiltelefonokhoz */
+    }
+
+    header nav {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    header nav a {
+        font-size: 18px; /* Kisebb betűméret */
+        margin-bottom: 10px; /* Kisebb távolság linkek között */
+    }
+
+    /* BODY */
+    .main div {
+        width: 80%; /* Még kisebb margó és nagyobb szélesség mobiltelefonokon */
+    }
+
+    .main div img {
+        width: 100%; /* Teljes szélességű képek mobilon */
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 10px 20px; /* Még kisebb padding */
+    }
+}
