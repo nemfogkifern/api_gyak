@@ -24,21 +24,31 @@ body {
 
 /* BODY */
 body {
-    background-color: rgba(0, 0, 0, 0.897);
+    background-color: rgb(48, 48, 48);
     color: rgb(238, 238, 238);
     background-image: url('/res/images/nasa-bg.jpg');
     background-size: cover;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* HEADER */
-header {
-    background-color: rgb(0, 0, 0);
+
+.overlay {
+    background-color: rgb(37, 37, 37);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
+
+    align-items: center;
+    z-index: 2;
 }
 
 header a {
@@ -47,32 +57,58 @@ header a {
     padding: 10px;
 }
 
-header a h1:hover {
-    color: rgb(202, 230, 254);
-    transition: all 0.3s ease;
-}
-
-header h1 {
-    text-align: center;
+#logo {
+    max-width: 60%;  /* For really small screens */
 }
 
 header nav {
-    display: none;
+    z-index: -1;
+
+    transform: translateY(-150%);
 
     width: 100%;
-    background-color: rgb(82, 82, 82);
+    background-color: rgba(175, 131, 131, 0.959);
+
+    position: fixed;
+    top: 68px;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 header nav a {
     color: aliceblue;
-    text-decoration: none;
     text-align: center;
     font-size: 25px;
+
+    margin-top: 3px;
+
+}
+
+header nav a:hover {
+    background-color: rgb(146, 111, 111);
+    transition: background-color 0.3s ease;
+}
+
+#active {
+    font-weight: bold;
+    background-color: rgba(175, 131, 162, 0.959);
+    border-top: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+#active:hover {
+    background-color: rgb(146, 111, 134);
+    transition: background-color 0.3s ease;
+
 }
 
 
 
-
+/* Hamburegr menu */
 header .hamburger {
     cursor: pointer;
     display: flex;
@@ -89,25 +125,51 @@ header span {
 }
 
 .active {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    z-index: 1;
+    max-height: fit-content;
+    transform: translateX(0%);
+    transition: all 0.3s ease;
+
+
+}
+
+.active-reverse {
+    z-index: -1;
+    transform: translateY(-150%);
+    transition: all 0.3s ease;
+}
+
+
+
+.bar-active-top {
+    transform: rotate(45deg) translate(0px, 12px);
+    transition: all 0.8s ease;
+}
+
+.bar-active-middle {
+    opacity: 0;
+    transition: all 0.8s ease;
 }
 
 .bar-active-bottom {
-    transform: rotate(-45deg) translate(0px, -7px);
+    transform: rotate(-45deg) translate(1px, -12px);
     transition: all 0.8s ease;
 }
 
-.bar-active-top {
-    transform: rotate(45deg) translate(0px, 6px);
+
+
+.bar-active-top-reverse {
+    transform: rotate(0deg) translate(0px, 0px);
     transition: all 0.8s ease;
 }
-.bar-active-middle {
-    display: none;
-}
+.bar-active-middle-reverse {
+    display: block;
 
-.bar {
+    opacity: 1;
+    transition: all 0.8s ease;
+}
+.bar-active-bottom-reverse {
+    transform: rotate(0deg) translate(0px, 0px);
     transition: all 0.8s ease;
 }
 
@@ -115,8 +177,10 @@ header span {
 
 /* BODY */
 .main {
+    margin-top: 100px;
+
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -155,10 +219,29 @@ header span {
 
 /* FOOTER */
 footer {
-    background-color: black;
+    background-color: rgb(37, 37, 37);
     color: aliceblue;
     text-align: center;
-    padding: 10px 150px;
+
+    border-top: 2px solid rgb(0, 0, 0);
+}
+
+.footer-container {
+    justify-self: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    margin: 10px 0px;
+    
+}
+
+footer a {
+    color: aliceblue;
+
 }
 
 
