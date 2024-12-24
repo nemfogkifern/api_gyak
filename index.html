@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NASA APIs</title>
     <link rel="stylesheet" href="res/style/main.css">
+    <link rel="shortcut icon" href="res/images/solar-system.png" type="image/x-icon">
 </head>
 <body>
 
     <header>
         <div class="overlay">
-            <a id="logo" href="index.html"><h1>NASA APIs</h1></a>
+            <a id="logo" href="index.html">  <h1>NASA APIs</h1><img class="menu-icon" src="res/images/satellite.png" alt="satellite as a logo"></a>
+            
     
             <div class="hamburger">
                 <span class="bar bar-top"></span>
@@ -21,7 +23,7 @@
         
 
         <nav class="menu">
-            <a id="active" href="index.html">Picture of the Day</a>
+            <a id="active" href="index.html"><img class="menu-icon" src="res/images/telescope.png" alt="Telescope image">Picture of the Day</a>
             <a href="index.html">Page2</a>
             <a href="index.html">Page3</a>
             <a href="index.html">Page4</a>
@@ -31,12 +33,15 @@
     </header>
     <div class="main">
     
-        <div id="apod">
-            <h2>Picture of the Day</h2>
+        <div class="card">
+            <h2 class="title-sm">Picture of the Day</h2>
             <p id="apodDate"></p>
-            <img id="apodImage" alt="Astronomy Picture of the Day" style="max-width: 100%; height: auto;">
-            <h3 id="apodTitle"></h3>
-            <p id="apodDescription"></p>
+            <img id="apodImage" alt="Astronomy Picture of the Day" />
+            <div class="card-content">
+                <h2 class="title-sm" id="apodTitle"></h2>
+                <p id="apodDescription"></p>
+            </div>
+            
         </div>
 
     

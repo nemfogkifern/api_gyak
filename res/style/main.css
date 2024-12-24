@@ -10,6 +10,7 @@
 
 img {
     max-width: 100%;
+    height: auto;
 }
 html, body {
     height: 100%;
@@ -50,15 +51,24 @@ body {
     align-items: center;
     z-index: 2;
 }
+#logo {
+    display: flex;
+    
+    flex-direction: row;
+    align-items: center;
 
-header a {
+
     text-decoration: none;
+    padding: 10px;
+
+    max-width: 80%;  /* For really small screens */
+}
+header a {
     color: aliceblue;
     padding: 10px;
 }
 
 #logo {
-    max-width: 60%;  /* For really small screens */
 }
 
 header nav {
@@ -77,15 +87,20 @@ header nav {
     flex-direction: column;
     justify-content: space-around;
     border: 1px solid rgb(0, 0, 0);
+
 }
 
 header nav a {
     color: aliceblue;
     text-align: center;
     font-size: 25px;
+    text-decoration: none;
 
     margin-top: 3px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header nav a:hover {
@@ -106,6 +121,15 @@ header nav a:hover {
 
 }
 
+.menu-icon {
+    width: 50px;
+    
+    
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 15px;
+
+}
 
 
 /* Hamburegr menu */
@@ -175,9 +199,13 @@ header span {
 
 
 
+
+
 /* BODY */
 .main {
     margin-top: 100px;
+
+    min-height: 100%;
 
     display: flex;
     flex-direction: column;
@@ -185,37 +213,58 @@ header span {
     justify-content: center;
 }
 
-.main div {
-    background-color: rgba(124, 124, 124, 0.636);
+.card {
+    background-color: rgba(22, 22, 22, 0.849);
+    border: 2px solid rgb(0, 0, 0);
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
-    border-radius: 10px;
+    width: 95%;
+    border-radius: 20px;
     text-align: center;
     padding: 10px 30px;
-    margin: 20px;
+    margin: 10px 0px;
 }
 
-.main div img {
+#apodImage {
     width: 100%;
     border-radius: 10px;
     border: 1px solid aliceblue;
+    margin: 15px 0px;
 }
 
-.main div img:hover {
+#apodImage:hover {
     transform: scale(1.03);
     transition: transform 0.3s ease;
 }
 
-#apod h2 {
-    background-color: rgba(0, 0, 0, 0.227);
-    width: 100%;
+#apodTitle {
+    justify-self: center;
+}
+
+#apodDescription {
+    margin: 15px 0px;
+    font-size: 17px;
+}
+#apodDate {
+    font-size: 25px;
+}
+
+.card-content {
     text-align: center;
+}
+
+
+.title-sm {
+    background-color: rgb(128, 89, 114);
+    width: fit-content;
+    padding: 5px;
     border-radius: 10px;
-    height: 30px;
     margin-bottom: 0px;
 }
+
+
 
 /* FOOTER */
 footer {
@@ -244,4 +293,72 @@ footer a {
 
 }
 
+
+/* MEDIA QUERIES */
+
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+    .card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title-sm {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    #apodImage {
+        width: 48%;
+    }
+    
+    #apodDescription {
+        margin: 5px 0px;
+        font-size: 15px;
+    }
+    #apodDate {
+        font-size: 25px;
+        width: 100%;
+    }
+
+    #apodTitle {
+        font-size: 18px;
+    }
+    .card-content {
+        margin: 2%;
+        width: 48%;
+    }
+
+
+
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+
+    .title-sm {
+        font-size: 40px;
+    }
+    #apodImage {
+        width: 30%;
+    }
+
+    .card-content {
+        width: 60%;
+        margin: 4%;
+    }
+    #apodTitle {
+        font-size: 24px;
+    }
+    #apodDescription {
+        font-size: 20px;
+    }
+    #apodDate {
+        font-size: 30px;
+    }
+}
 

@@ -1,5 +1,5 @@
 
-const apiKey = 'cSVNaRX7SQkPWhn0joajpLmB1hBVpbIPnDXTfehc';
+const apiKey = 'yVx7iKgBpMRdV6NUDtxfIDZgcjHblflO1tezTiIV';
 const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
 
 
