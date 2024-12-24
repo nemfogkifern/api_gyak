@@ -27,7 +27,7 @@ body {
 body {
     background-color: rgb(48, 48, 48);
     color: rgb(238, 238, 238);
-    background-image: url('../res/images/nasa-bg.jpg');
+    background-image: url('../images/nasa-bg.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
