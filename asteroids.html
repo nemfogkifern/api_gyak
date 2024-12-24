@@ -23,8 +23,8 @@
         
 
         <nav class="menu">
-            <a id="active" href="index.html"><img class="menu-icon" src="res/images/space.png" alt="Space image">Picture of the Day</a>
-            <a  href="asteroids.html"><img class="menu-icon" src="res/images/asteroids.png" alt="asteroids image">Asteroids</a>
+            <a href="index.html"><img class="menu-icon" src="res/images/space.png" alt="Space image">Picture of the Day</a>
+            <a  id="active" href="asteroids.html"><img class="menu-icon" src="res/images/asteroids.png" alt="Asteroids image">Asteroids</a>
             <a href="index.html">Page3</a>
             <a href="index.html">Page4</a>
         </nav>
@@ -33,15 +33,38 @@
     </header>
     <div class="main">
     
-        <div class="card">
-            <h2 class="title-sm">Picture of the Day</h2>
-            <p id="apodDate"></p>
-            <img id="apodImage" alt="Astronomy Picture of the Day" />
-            <div class="card-content">
-                <h2 class="title-sm" id="apodTitle"></h2>
-                <p id="apodDescription"></p>
+        <div class="card">            
+            <h2 class="title-sm">Asteroids Information</h2>
+
+            
+            <div class="asteroid-nav">
+                <button id="asteroidPrevious"><</button> 
+                <span id="pageNumber"></span>
+                <button id="asteroidNext">></button>
             </div>
             
+            
+            <table class="asteroid-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Estimated Diameter Max(km)</th>
+                        <th>Orbital Period</th>
+                        <th>First Observation Date</th>
+                        <th>Is Potentially Hazardous</th>
+                    </tr>
+                </thead>
+                <tbody id="asteroidTable">
+
+
+            </table>
+        
+        
+            
+
+        </div>
+            
+
         </div>
 
     
@@ -60,6 +83,6 @@
 
 
     <script src="res/scripts/main.js"></script>
-    <script src="res/scripts/apod.js"></script>
+    <script src="res/scripts/asteroids.js"></script>
 </body>
 </html>

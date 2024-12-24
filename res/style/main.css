@@ -96,7 +96,7 @@ header nav a {
     font-size: 25px;
     text-decoration: none;
 
-    margin-top: 3px;
+    margin: 3px 0px;
 
     display: flex;
     justify-content: center;
@@ -210,7 +210,7 @@ header span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+
 }
 
 .card {
@@ -263,6 +263,85 @@ header span {
     border-radius: 10px;
     margin-bottom: 0px;
 }
+
+
+
+/* asteroids page */
+
+.asteroid-table {
+    width: 90%;
+    margin: 20px 0px;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: rgb(58, 58, 58);
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+th,td {
+    border: 1px solid aliceblue;
+    padding: 5px;
+    text-align: center;
+    height: 30px;
+}
+tbody tr:nth-child(odd) {
+    background-color: rgb(189, 133, 168);
+    color: rgb(0, 0, 0);
+}
+tbody tr:nth-child(even) {
+    background-color: rgb(141, 68, 114);
+}
+
+.asteroid-more-info a {
+    color: rgb(255, 255, 255);
+}
+.asteroid-more-info {
+    border: none;
+    background-color: rgb(58, 58, 58);
+    width: 100px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+
+
+
+.asteroid-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    width: 70%;
+}
+
+#asteroidPrevious, #asteroidNext {
+    background-color: rgb(58, 58, 58);
+    color: aliceblue;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0px 10px;
+    border: 1px solid rgb(255, 255, 255);  
+    font-size: 20px;
+    width: 50px;
+    
+}
+
+#pageNumber {
+
+    font-size: 40px;
+    margin: 0px 10px;
+}
+
+#asteroidPrevious:hover, #asteroidNext:hover {
+    background-color: rgb(128, 89, 114);
+    transition: background-color 0.3s ease;
+}
+
 
 
 
