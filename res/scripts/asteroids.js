@@ -37,7 +37,7 @@ updateAsteroids();
 updatePageNumber();
 
 function updateAsteroids() {
-    var asteroidsApiUrl = `http://api.nasa.gov/neo/rest/v1/neo/browse?page=${pageNum}&size=20&api_key=${apiKey}`;
+    var asteroidsApiUrl = `https://api.nasa.gov/neo/rest/v1/neo/browse?page=${pageNum}&size=20&api_key=${apiKey}`;
 
     fetch(asteroidsApiUrl)
     .then(response => {
